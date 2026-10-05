@@ -1,0 +1,196 @@
+:root {
+  --navy: #243447;
+  --green: #2f6b4f;
+  --gold: #d6a84f;
+  --gold-hover: #e2b965;
+  --background: #f4f6f5;
+  --muted: #667085;
+}
+
+* {
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+/* ========================= HERO ========================= */
+.hero-section {
+  min-height: 100vh;
+  background-image: url("../assets/images/scouts-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(36, 52, 71, .93), rgba(47, 107, 79, .75));
+}
+
+.hero-section .container {
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.4rem, 4vw, 2.3rem);
+}
+
+.hero-description {
+  max-width: 650px;
+  color: rgba(255, 255, 255, .85);
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+/* ========================= MAIN BUTTON ========================= */
+.btn-main {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+}
+
+.btn-main:hover {
+  background: var(--gold-hover);
+  color: var(--navy);
+}
+
+/* ========================= TYPING ========================= */
+.typing::after {
+  content: "الخدمة";
+  color: var(--gold);
+  animation: typing 8s infinite;
+}
+
+@keyframes typing {
+  0% {
+    content: "الخدمة";
+  }
+
+  25% {
+    content: "القيادة";
+  }
+
+  50% {
+    content: "الصداقة";
+  }
+
+  75% {
+    content: "المغامرة";
+  }
+
+  100% {
+    content: "الخدمة";
+  }
+}
+
+/* ========================= SECTIONS ========================= */
+.about-section {
+  background: var(--background);
+}
+
+.features-section {
+  background: #eef2ef;
+}
+
+.section-label {
+  color: var(--green);
+  font-size: .95rem;
+}
+
+.section-title {
+  color: var(--navy);
+}
+
+.section-text {
+  color: var(--muted);
+  line-height: 2;
+}
+
+/* ========================= ABOUT IMAGE ========================= */
+.about-image-wrapper {
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(36, 52, 71, .15);
+}
+
+.about-image {
+  width: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+/* ========================= FEATURE CARDS ========================= */
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid rgba(36, 52, 71, .06);
+  transition: .3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(36, 52, 71, .1);
+}
+
+.feature-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(47, 107, 79, .1);
+  color: var(--green);
+  font-size: 28px;
+}
+
+/* ========================= FOOTER ========================= */
+footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, .7);
+}
+
+/* ========================= MOBILE ========================= */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.45rem;
+  }
+
+  .hero-description {
+    font-size: .95rem;
+    padding-inline: 10px;
+  }
+
+  .about-image {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-description {
+    font-size: .9rem;
+  }
+}
